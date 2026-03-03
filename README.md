@@ -211,4 +211,6 @@ This layer functions independently and can be reused as a framework.
 • React Official Documentation
 • Research literature on social compatibility modeling and roommate matching frameworks
 
+🔬 Technical Innovation
 
+StayMatch introduces a configurable compatibility engine where scoring weights can be dynamically adjusted without modifying core logic. The system separates compatibility evaluation from application logic, enabling reuse as a standalone framework. Additionally, rule-based conflict risk modeling ensures interpretability and transparency in match evaluation.
