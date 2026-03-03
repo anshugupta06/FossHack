@@ -2,162 +2,213 @@ StayMatch -  An Open-Source Lifestyle Compatibility Engine for Shared Living
 
 ✨ Problem Statement
 
-Students and working professionals moving to new cities struggle to find not just accommodation, but compatible roommates. Current methods like brokers, social media groups, or random allocation focus only on room availability and ignore lifestyle compatibility. This often leads to conflicts due to differences in habits, schedules, cleanliness, food preferences, and budget expectations.
-There is a need for a structured, database-driven platform that integrates accommodation listing with roommate compatibility matching to ensure a smoother and more harmonious shared living experience.
+In urban environments, students and working professionals frequently relocate for education and employment. While accommodation discovery has become easier through digital platforms, roommate allocation remains largely unstructured and compatibility-blind. Most existing systems prioritize room availability over lifestyle alignment, resulting in frequent interpersonal conflicts.
 
-✨ Motivation 
+Differences in sleep schedules, cleanliness standards, study habits, noise tolerance, smoking preferences, financial expectations, and social behavior often lead to avoidable disputes in shared living spaces. Current methods such as broker-based allocation, social media groups, or random hostel assignments lack any structured compatibility evaluation mechanism.
 
-Nowadays, many students and working professionals move to new cities for studies or jobs. One of the 
-biggest challenges they face is finding a suitable hostel or PG and a roommate who matches their 
-lifestyle. Most people depend on brokers, social media groups, or random roommate allocation. Because 
-of this, they often end up facing problems like lifestyle clashes, cleanliness issues, financial 
-misunderstandings, or differences in daily habits.
-Right now, there is no proper system that checks whether two people are actually compatible before they 
-share a room. Differences in sleep schedules, smoking or drinking habits, food preferences, and budget 
-expectations can easily lead to conflicts.
-This project aims to make this process more organized and reliable by creating a web-based platform 
-that stores user preferences and calculates compatibility between roommates. By using a structured 
-database system, the platform can manage data properly and suggest better matches, helping users avoid 
-unnecessary conflicts and have a smoother accommodation experience.
+There is no open-source, configurable framework that evaluates lifestyle compatibility and predicts potential conflict risk before individuals share a room.
+
+This gap results in:
+
+- Increased roommate conflicts
+
+- Reduced productivity and mental well-being
+
+- Financial misunderstandings
+
+- Early termination of accommodation agreements
+
+Therefore, there is a need for a structured, modular, and configurable compatibility evaluation system that can assess lifestyle alignment, predict conflict risk, and assist institutions or co-living providers in making informed roommate allocations.
 
 ✨ Current Solution
 
-At present, most people find hostels or PG accommodations through local brokers, WhatsApp or 
-Telegram groups, Facebook Marketplace, personal contacts, or sometimes through random allocation by 
-hostel management. While these methods may help in finding a room, they do not consider whether the 
-roommates are actually compatible with each other.
-In most cases, roommate selection happens randomly or simply based on room availability. There is no 
-proper system that checks lifestyle habits, personal preferences, or daily routines before assigning 
-roommates. Because of this, many people face issues after moving in.
-Although some international platforms provide online housing listings, they mainly focus on renting 
-properties and not on structured roommate compatibility analysis. This creates a gap where 
-accommodation and roommate matching are not properly integrated. Therefore, there is a need for a 
-system that not only lists hostels and PGs but also uses a database-driven approach to match roommates 
-based on compatibility
+At present, individuals searching for shared accommodation primarily rely on:
+
+- Local brokers or agents
+
+- Social media groups (WhatsApp, Telegram, Facebook Marketplace)
+
+- Word-of-mouth referrals
+
+- Random allocation by hostel or PG management
+
+- Rental listing platforms that focus only on property availability
+
+While these approaches help users find available rooms, they do not evaluate interpersonal compatibility between roommates.
+
+Roommate allocation is typically based on:
+
+- Vacancy availability
+
+- Gender
+
+- Budget similarity
+
+- Basic preferences
+
+There is no structured evaluation of lifestyle alignment such as sleep schedules, cleanliness standards, study habits, social behavior, or conflict sensitivity.
+
+Even existing digital rental platforms focus primarily on property discovery rather than compatibility modeling. They do not provide:
+
+- Configurable compatibility scoring
+
+- Conflict risk prediction
+
+- Structured preference comparison
+
+- Pre-roommate agreement mechanisms
+
+As a result, compatibility assessment is informal, subjective, and reactive — often addressed only after conflicts arise.
+
+This highlights the absence of a modular, open-source compatibility framework designed specifically for shared living environments.
 
 ✨ Project Goals and Milestones
 
-General Goals:
+🎯 General Goals
 
-• To design and implement a structured relational database for managing users, hostels, rooms, and 
-preferences.
+• To design and implement a modular, open-source lifestyle compatibility engine for structured roommate allocation.
 
-• To develop a compatibility scoring algorithm for effective roommate matching.
+• To develop a configurable compatibility scoring framework that allows adjustable weight parameters.
 
-• To create a user-friendly interface for registration, login, and preference input.
+• To introduce a conflict risk prediction layer based on rule-based compatibility analysis.
 
-• To ensure proper data normalization and maintain data integrity within the database.
+• To design a clean and scalable API architecture for integration with hostels, universities, or co-living platforms.
 
-• To provide conflict risk alerts based on calculated compatibility scores.
+• To provide a digital roommate agreement generation system for structured shared-living commitments.
 
-  Milestones:
-  
-•Requirement analysis and ER diagram design.
+• To ensure clean documentation, modular codebase, and contribution-friendly open-source structure.
 
-•Database schema design and normalization.
+📌 Milestones
+Phase 1 – Core Architecture
 
-•Backend development and API integration.
+• Requirement analysis and compatibility parameter definition
+• ER diagram and database schema design
+• Backend server setup and API structure
+• User and accommodation data models
 
-• Implementation of the compatibility matching algorithm.
+Phase 2 – Compatibility Engine
 
-•Frontend development and integration with backend.
+• Implementation of weighted compatibility scoring
+• Development of configurable scoring model (JSON-based weights)
+• Match explanation logic
+• Conflict risk classification system
 
-•Testing, debugging, and performance validation.
+Phase 3 – Practical Integration Layer
 
-•Documentation preparation and final system demonstration
+• Digital roommate agreement generator
+• Agreement storage and retrieval
+• Frontend integration with match results
+• Visual compatibility analytics (Radar chart / risk indicators)
+
+Phase 4 – Refinement & Open Source Readiness
+
+• Code refactoring and modularization
+• API documentation
+• Contribution guide and setup instructions
+• Testing and performance validation
+• Final demonstration and deployment
 
 ✨ Project Approach
 
-The project will follow a structured DBMS-based development approach:
+1️⃣ Requirement & Parameter Analysis
 
-1. Requirement Analysis
-   
-Identify user attributes, hostel details, and preference parameters.
-Database Design
-◦ ER Diagram creation
-◦ Relational schema design
-◦ Primary and foreign key definition
-◦ Normalization up to 3NF
+Identify measurable lifestyle attributes such as:
 
-2. Backend Implementation
-◦ Use Node.js and Express for server logic
-◦ Implement CRUD operations
-◦ Store data in MongoDB
+- Sleep schedule
 
-3. Matching Algorithm
-◦ Compare user preferences
-◦ Assign weighted scores to each parameter
-◦ Calculate compatibility percentage
+- Cleanliness level
 
-4. Frontend Development
-◦ React / HTML + CSS
-◦ Forms for user input
-◦ Display match results
-The solution will be modular and scalable.
+- Smoking preference
+
+- Study habits
+
+- Noise tolerance
+
+- Personality type
+
+Define scoring weight structure and compatibility logic.
+
+2️⃣ Modular Database & Architecture Design
+
+• ER diagram creation
+• Schema design for Users, Preferences, Accommodations, Agreements
+• Clear separation of models, routes, and controllers
+• Scalable backend architecture using Node.js + Express
+• MongoDB for structured preference storage
+
+Focus: Clean, reusable, modular design.
+
+3️⃣ Compatibility Engine Implementation
+
+• Weighted scoring mechanism
+• Configurable weight configuration file
+• Score normalization (0–100%)
+• Rule-based conflict risk triggers
+• Transparent match explanation output
+
+This layer functions independently and can be reused as a framework.
+
+4️⃣ Conflict Prediction Layer
+
+• Classification into Low / Moderate / High Risk
+• Rule-based mismatch detection
+• Lifestyle gap threshold logic
+• Explanation of risk factors
+
+5️⃣ Agreement & Visualization Layer
+
+• Generate digital roommate agreement
+• Customizable shared-living rules
+• PDF export option
+• Radar chart comparison of lifestyle factors
+• Visual conflict indicator
+
+6️⃣ Open Source & Documentation Strategy
+
+• MIT license compliance
+• Clean repository structure
+• README with architecture explanation
+• API documentation
+• Contribution guide
+• Modular folder organization
 
 ✨ Project Outcomes
 
-•A fully working and responsive Smart Hostel & Roommate Matching web 
-application that users can actually interact with.
-•Users will be able to create accounts, log in securely, and manage their personal profiles 
-easily.
+• A fully functional Open-Source Lifestyle Compatibility Engine.
 
-•The platform will allow users to enter their lifestyle preferences like budget, habits, and 
-daily routine to find suitable matches.
+• A configurable roommate matching system that institutions can adapt by modifying weight configurations.
 
-•Students can browse available hostels or PG listings in an organized way instead of 
-searching randomly.
+• Transparent compatibility scoring with detailed match explanations.
 
-•The system will suggest roommates based on a calculated compatibility percentage.
+• Conflict risk prediction before room allocation.
 
-• It will clearly show whether a match is highly compatible or may lead to possible 
-conflicts.
+• Digital roommate agreement generation to formalize shared living expectations.
 
-•The application will have a clean and simple interface so that anyone can use it without 
-confusion.
+• Visual compatibility analytics for better decision-making.
 
-•Frontend and backend will be properly connected to provide smooth and real-time 
-interaction.
+• Clean modular backend architecture suitable for further extension.
 
-•A structured database will securely store user details, hostel information, and match 
-records.
+• Contribution-ready open-source repository with proper documentation.
 
-•The project will also include ER diagrams, database schema, and a system architecture 
-diagram to explain the technical design.
-
-•Finally, a complete project report and a live demo of the working platform will be 
-presented.
+• A deployable and scalable framework for universities and co-living platforms.
 
 
 ✨ Assumptions
 
-• Users provide accurate and honest preference information.
-
-• Internet connectivity is available.
-
-• The system is initially deployed for a limited number of users.
-
-• Budget and lifestyle factors are measurable and comparable.
-
-• Admin verification is optional in the initial version
+• Users provide reasonably accurate preference information.
+• Lifestyle parameters are measurable and comparable.
+• Institutions may customize weight configuration as per policy.
+• The system initially handles a moderate user base.
+• Risk classification is rule-based in the current version (no ML dependency).
 
 ✨ References
 
-•Elmasri, R. & Navathe, S. Fundamentals of Database Systems, Pearson.
+• Elmasri & Navathe – Fundamentals of Database Systems
+• Korth & Silberschatz – Database System Concepts
+• MongoDB Official Documentation
+• Node.js Documentation
+• Express.js Guide
+• React Official Documentation
+• Research literature on social compatibility modeling and roommate matching frameworks
 
-•Korth, H., & Silberschatz, A. Database System Concepts, McGraw-Hill.
 
-•MongoDB Official Documentation, https://www.mongodb.com/docs/
-
-•Node.js Documentation, https://nodejs.org/en/docs/
-
-•Express.js Guide, https://expressjs.com/en/guide/ 
-
-•React Official Documentation, https://reactjs.org/docs/getting-started.html
-
-•Gao, J., Cai, X., et al., A Recommendation System for Roommate Matching Using Collaborative 
-Filtering, IEEE.
-
-•Zhang, Y., Zhang, Q., & Wu, L., Hybrid Algorithm for Social Compatibility Prediction, Springer.
-
-•Li, H., et al., Student Housing & Roommate Matching Using Machine Learning, Journal Name.
