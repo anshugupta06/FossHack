@@ -1,4 +1,4 @@
-StayMatch -  Open Source Roommate Compatibility Platform
+StayMatch -  An Open-Source Lifestyle Compatibility Engine for Shared Living
 
 ✨ Problem Statement
 
