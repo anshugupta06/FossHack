@@ -1,5 +1,7 @@
 const express = require("express");
 
+const userRoutes = require("./routes/userRoutes");
+
 const app = express();
 
 app.use(express.json());
@@ -7,6 +9,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("StayMatch API Running");
 });
+
+app.use("/api/users", userRoutes);
 
 const PORT = 5000;
 
