@@ -7,7 +7,7 @@ The system evaluates lifestyle preferences and predicts **compatibility scores a
 ---
 
 ## Table of Contents
-
+ 
 - [Problem Statement](#problem-statement)
 - [Current Solution](#current-solution)
 - [Project Goals and Milestones](#project-goals-and-milestones)
