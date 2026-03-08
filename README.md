@@ -227,19 +227,19 @@ StayMatch provides several features to improve compatibility-based roommate allo
 - Postman
 
 ---
-
-# Backend Architecture
+## Backend Architecture
 
 The backend follows a modular architecture.
 
+```
 backend/
-
+│
 ├── models
 ├── controllers
 ├── routes
 ├── config
 └── server.js
-
+```
 
 - **Models** – Database schema definitions  
 - **Controllers** – Business logic  
@@ -247,25 +247,27 @@ backend/
 - **Config** – Database configuration  
 - **server.js** – Main application entry point  
 
----
-# Repository Structure
-FossHack/
 
+
+---
+## Repository Structure
+
+```
+FossHack/
+│
 ├── backend
-│ ├── models
-│ ├── controllers
-│ ├── routes
-│ ├── config
-│ └── server.js
+│   ├── models
+│   ├── controllers
+│   ├── routes
+│   ├── config
+│   └── server.js
 │
 ├── index.html
 ├── script.js
 ├── style.css
 ├── README.md
 └── LICENSE
-
----
-
+```
 # Project Outcomes
 
 - Open-source compatibility engine
@@ -336,4 +338,4 @@ FossHack/
 
 ### 7 March 2026
 - Minor fixes and documentation improvements
-- 
+- Documentation improvements and progress updates
