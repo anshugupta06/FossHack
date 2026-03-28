@@ -20,36 +20,32 @@ The system evaluates lifestyle preferences and predicts **compatibility scores a
 - [Future Improvements](#future-improvements)
 - [Assumptions](#assumptions)
 - [References](#references)
-- [Development Progress](#development-progress)
-
 ---
 
 # Problem Statement
 
-In urban environments, students and working professionals frequently relocate for education and employment. While accommodation discovery has become easier through digital platforms, **roommate allocation remains largely compatibility-blind**.
+In urban environments, students and working professionals frequently relocate for education and employment. While accommodation discovery has become easier through digital platforms, roommate allocation remains largely compatibility-blind.
 
 Differences in lifestyle habits such as:
 
-- Sleep schedule  
-- Cleanliness standards  
-- Study habits  
-- Noise tolerance  
-- Smoking preferences  
-- Social behavior  
-
+Sleep schedule
+Cleanliness standards
+Study habits
+Noise tolerance
+Smoking preferences
+Social behavior
 often lead to conflicts between roommates.
 
-Most existing accommodation platforms focus only on **room availability**, not **lifestyle compatibility**.
+Most existing accommodation platforms focus only on room availability, not lifestyle compatibility.
 
 This results in:
 
-- Frequent roommate conflicts  
-- Reduced productivity  
-- Mental stress  
-- Financial disagreements  
-- Early termination of accommodation agreements  
-
-Therefore, there is a need for a **structured compatibility evaluation system** that predicts lifestyle alignment before roommates are assigned.
+Frequent roommate conflicts
+Reduced productivity
+Mental stress
+Financial disagreements
+Early termination of accommodation agreements
+Therefore, there is a need for a structured compatibility evaluation system that predicts lifestyle alignment before roommates are assigned.
 
 ---
 
@@ -169,18 +165,98 @@ Based on rule-based mismatch detection.
 
 # System Features
 
-StayMatch provides several features to improve compatibility-based roommate allocation.
+StayMatch provides intelligent, AI-driven features to enable compatibility-based roommate matching and reduce conflicts in shared living environments.
 
-1. Lifestyle Compatibility Matching  
-2. Configurable Compatibility Engine  
-3. Conflict Risk Prediction  
-4. Match Explanation System  
-5. Digital Roommate Agreement Generator  
-6. Compatibility Visualization (Radar Charts)  
-7. Guest Mode Access  
-8. Smart Match Recommendation System  
-9. Lifestyle Comparison Dashboard  
-10. Compatibility Feedback System  
+🧠 Core Features
+
+- Lifestyle Compatibility Matching
+  
+  Evaluates users based on lifestyle parameters such as sleep cycle, cleanliness, noise tolerance, and social behavior to generate compatibility insights.
+
+- Conflict Risk Prediction Engine
+  
+  Predicts potential roommate conflicts using rule-based analysis and categorizes matches into Low, Medium, and High Risk.
+
+- Smart Chore Allocation System
+  
+  AI-based chore distribution using:
+
+    - Difficulty weighting
+      
+    - Cleanliness preference balancing
+      
+    - Weekly rotation system
+      
+    - Fairness score calculation
+      
+- Agreement Architect (Auto Contract Generator)
+  
+  Automatically generates structured roommate agreements based on:
+
+    - Rent details
+      
+    - Rules & responsibilities
+      
+    - Lifestyle preferences
+      
+📊 Visualization & Insights
+
+- Workload Distribution Visualization
+  
+ Interactive Pie Chart (Chart.js) showing chore distribution between roommates.
+ 
+- Fairness Meter
+  
+ Displays balance in workload assignment with dynamic visual feedback.
+
+- Final Match Verdict System
+  
+  Combines:
+   - Compatibility Score
+     
+   - Conflict Risk
+     
+   - Chore Fairness
+     
+       → to generate a final recommendation:
+     
+   - Ideal Match
+     
+   - Good Match
+     
+   - Not Recommended
+
+⚡User Experience Features
+     
+- Interactive Dashboard UI (Bento Grid Design)
+  
+  Modern glassmorphism-based dashboard for seamless navigation.
+ 
+- Typewriter AI Feedback System
+  
+  Dynamic AI-generated outputs with real-time typing animation.
+ 
+- Downloadable Outputs
+  
+Users can download:
+
+  - Agreements
+    
+  - Chore Plans
+  
+- Local Storage-Based Session Handling
+  
+  Maintains user state without complex backend auth flow.
+
+🔧 Functional Features
+- REST API Backend Integration
+  Modular API system for:
+  - Matching
+  - Conflict prediction
+  - Agreement generation
+  - Chore allocation
+- Extensible Rule-Based Engine
+  Easily upgradable to ML-based models in future.
 
 ---
 
@@ -191,7 +267,6 @@ StayMatch provides several features to improve compatibility-based roommate allo
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- React.js
 - Chart.js
 
 ## Backend
@@ -201,24 +276,13 @@ StayMatch provides several features to improve compatibility-based roommate allo
 
 ## Database
 
-- MongoDB
-- Mongoose
+- MongoDB (for storing user data & preferences)
+- Mongoose (schema & data modeling)
 
 ## Authentication
 
 - JSON Web Tokens (JWT)
 - bcrypt.js
-
-## Agreement Generation
-
-- PDFKit
-- HTML-PDF
-
-## Deployment
-
-- MongoDB Atlas
-- Render / Railway
-- Vercel / Netlify
 
 ## Development Tools
 
@@ -253,18 +317,62 @@ backend/
 ## Repository Structure
 
 ```
-FossHack/
+StayMatch/
 │
-├── backend
-│   ├── models
-│   ├── controllers
-│   ├── routes
-│   ├── config
+├── backend/
+│   │
+│   ├── dataset/
+│   │   └── staymatch_lifestyle_dataset.csv
+│   │
+│   ├── models/
+│   │   ├── feedback.js
+│   │   └── User.js
+│   │
+│   ├── routes/
+│   │   ├── agreement.js
+│   │   ├── authRoutes.js
+│   │   ├── choresRoutes.js
+│   │   ├── conflictRoutes.js
+│   │   ├── feedbackRoutes.js
+│   │   └── matchRoutes.js
+│   │
+│   ├── compatibility-engine/
+│   │   ├── compatibility.js
+│   │   └── weights.json
+│   │
+│   ├── .env
+│   ├── seed.js
 │   └── server.js
 │
-├── index.html
-├── script.js
-├── style.css
+├── frontend/
+│   ├── public/
+│   │   ├── agreement.html
+│   │   ├── agreement.css
+│   │   ├── agreement.js
+│   │   │
+│   │   ├── conflict.html
+│   │   ├── conflict.css
+│   │   ├── conflict.js
+│   │   │
+│   │   ├── dashboard.html
+│   │   ├── dashboard_style.css
+│   │   ├── dashboard_script.js
+│   │   │
+│   │   ├── feedback.html
+│   │   ├── feedback.css
+│   │   │
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   ├── style.css
+│   │   │
+│   │   ├── matching.html
+│   │   ├── matching.css
+│   │   ├── matching.js
+│   │   │
+│   │   ├── smart.html
+│   │   ├── smart.css
+│   │   └── smart.js
+│
 ├── README.md
 └── LICENSE
 ```
@@ -313,10 +421,16 @@ FossHack/
 
 ## Screenshots
 
-![Login_Page](login_page.png)
+![Login_Page](Login_Page.png)
 
-![Dashboard](dashboard.png)
+![Dashboard](Dashboard.png)
 
-![Matching](matching.png)
+![Compatibility_Check](Compatibility_Check.png)
 
-![Compatibility](compatibility.png)
+![Conflict_Check](Conflict_Check.png)
+
+![Smart_Chores](Task_Chores.png)
+
+![Agreement](Agreement.png)
+
+
